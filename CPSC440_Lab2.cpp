@@ -114,7 +114,7 @@ void makeTurtle(int x, int y) {
 
     //Make Eyes
     al_draw_filled_ellipse(x + 47, y + 12, 5, 3, white);
-    al_draw_filled_ellipse(x + 47, y - 12, 5, 3, white); //might need to change 3 to 4
+    al_draw_filled_ellipse(x + 47, y - 12, 5, 3, white);
 
     al_draw_filled_ellipse(x + 47, y - 12, 4, 3, black);
     al_draw_filled_ellipse(x + 47, y + 12, 4, 3, black);
