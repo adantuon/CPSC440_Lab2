@@ -69,6 +69,22 @@ int main()
                 case ALLEGRO_KEY_RIGHT:
                     x += 20;
                     break;
+                case ALLEGRO_KEY_U:
+                    y -= 20;
+                    x -= 20;
+                    break;
+                case ALLEGRO_KEY_D:
+                    y += 20;
+                    x += 20;
+                    break;
+                case ALLEGRO_KEY_R:
+                    y -= 20;
+                    x += 20;
+                    break;
+                case ALLEGRO_KEY_L:
+                    y += 20;
+                    x -= 20;
+                    break;
                 case ALLEGRO_KEY_ESCAPE:
                     exit = true;
                     break;
