@@ -58,12 +58,16 @@ int main()
         if (Event.type == ALLEGRO_EVENT_KEY_DOWN) {
             switch (Event.keyboard.keycode) {
                 case ALLEGRO_KEY_UP:
+                    y -= 20;
                     break;
                 case ALLEGRO_KEY_DOWN:
+                    y += 20;
                     break;
                 case ALLEGRO_KEY_LEFT:
+                    x -= 20;
                     break;
                 case ALLEGRO_KEY_RIGHT:
+                    x += 20;
                     break;
                 case ALLEGRO_KEY_ESCAPE:
                     exit = true;
