@@ -39,11 +39,23 @@ int main()
     al_init_primitives_addon();
     al_register_event_source(EventQueue, al_get_display_event_source(display));
 
-    al_clear_to_color(al_map_rgb(0, 0, 0));
+    bool exit = false;
 
-    al_flip_display();
+    while (!exit) {
+        al_clear_to_color(al_map_rgb(0, 0, 0));
 
-    al_rest(5.0);
+        al_flip_display();
+
+        al_wait_for_event(EventQueue, &Event);
+
+        if (Event.type == ALLEGRO_EVENT_KEY_DOWN) {
+            switch (Event.keyboard.keycode) {
+                case ALLEGRO_KEY_ESCAPE:
+                    exit = true;
+                    break;
+            }
+        }
+    }
 
     al_destroy_display(display);
 
