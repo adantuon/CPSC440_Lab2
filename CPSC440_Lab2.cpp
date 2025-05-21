@@ -28,6 +28,17 @@ int main()
         return(-1);
     }
 
+    if (!al_install_keyboard()) {
+        fprintf(stderr, "Event Queue Creation Failed\n");
+        return(-1);
+    }
+
+    //Get events from keyboard
+    al_register_event_source(EventQueue, al_get_keyboard_event_source());
+
+    al_init_primitives_addon();
+    al_register_event_source(EventQueue, al_get_display_event_source(display));
+
     al_clear_to_color(al_map_rgb(0, 0, 0));
 
     al_flip_display();
